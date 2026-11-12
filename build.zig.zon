@@ -8,10 +8,7 @@
     .minimum_zig_version = "0.18.0-dev.1005+75d48dfff",
 
     .dependencies = .{
-        .aro = .{
-            .url = "git+https://github.com/IamSanjid/arocc?ref=zig-master#25354f6f918d3aab4bd8bacb19433aa5567b449d",
-            .hash = "aro-0.1.0-dev-JSD1QpfGOQBjWy8FxxuQUICkbqkMWVR8cLDMrg1FJJ9C",
-        },
+        .aro = .{ .path = "../arocc" },
     },
 
     .paths = .{
