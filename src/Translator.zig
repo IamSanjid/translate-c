@@ -3832,7 +3832,7 @@ fn transStringLiteralInitializer(
         .filler = .zero_literal,
         .count = array_size - str_length,
     });
-    return ZigTag.array_cat.create(t.arena, .{ .lhs = init_node, .rhs = filler_node });
+    return ZigTag.cat.create(t.arena, .{ .lhs = init_node, .rhs = filler_node });
 }
 
 fn transCompoundLiteral(
@@ -3951,7 +3951,7 @@ fn transArrayInit(
             },
         };
         maybe_lhs = if (maybe_lhs) |lhs| blk: {
-            const cat = try ZigTag.array_cat.create(t.arena, .{
+            const cat = try ZigTag.cat.create(t.arena, .{
                 .lhs = lhs,
                 .rhs = rhs,
             });
